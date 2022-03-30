@@ -70,7 +70,7 @@ function loadScedule(klasse_id) { //funktion zum laden des stundenplans
                 table += "<tr>"
                 table += "<td>" + moment(this['tafel_datum']).format("DD-MM-YYYY") + "</td>"; //Datum in zahlen
                 table += "<td>" + moment(this['tafel_datum']).format('dddd') + "</td>"; //wochentag
-                table += "<td>" + "Von " + this['tafel_von'].slice(0, 5) + " bis " + this['tafel_bis'].slice(0, 5) + "</td>"; //zeit
+                table += "<td>" + this['tafel_von'].slice(0, 5) + " bis " + this['tafel_bis'].slice(0, 5) + "</td>"; //zeit
                 table += "<td>" + this['tafel_longfach'] + "</td>"; //fach
                 table += "<td>" + this['tafel_lehrer'] + "</td>"; //lehrer
                 table += "<td>" + this['tafel_raum'] + "</td>"; //zimmer
