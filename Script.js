@@ -65,7 +65,7 @@ function loadScedule(klasse_id) { //funktion zum laden des stundenplans
     var table = '';
     $.getJSON("http://sandbox.gibm.ch/tafel.php?klasse_id=" + klasse_id + "&woche=" + iCWeek + "-" + iYear).done(function (data) { //daten per api im json-format geholt mit aktueller woche und Jahr
         if (data.length > 2) { //Überprüfung ob Ferien sind oder nicht
-            table += "<table class='table table-dark table-responsive'><thead class='fw-bold'><th scope='col'>Datum</th><th scope='col'>Wochentag</th><th scope='col'>Von-Bis</th><th scope='col'>Fach</th><th scope='col'>Lehrer</th><th scope='col'>Zimmer</th></thead>"; //stundenplan designt und erstellt
+            table += "<table class='table table-dark'><thead class='fw-bold'><th scope='col'>Datum</th><th scope='col'>Wochentag</th><th scope='col'>Von-Bis</th><th scope='col'>Fach</th><th scope='col'>Lehrer</th><th scope='col'>Zimmer</th></thead>"; //stundenplan designt und erstellt
             $.each(data, function () {
                 table += "<tr>"
                 table += "<td>" + moment(this['tafel_datum']).format("DD-MM-YYYY") + "</td>"; //Datum in zahlen
